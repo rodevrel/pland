@@ -51,4 +51,3 @@ class AbsractGameObject(ABC):
   @property
   def name(self):
     return self.__name__
-    return self.
