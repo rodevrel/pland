@@ -1,3 +1,4 @@
+from typing import List
 import abc from ABC
 
 # Transform Game Objects
@@ -34,7 +35,7 @@ class Transform:
 # Game Objects
 class AbsractGameObject(ABC):
   
-  def __init__(self, transform: Transform, tag: str = None, name: str = None):
+  def __init__(self, transform: Transform, tag: List(str) = [], name: str = None):
     
     self.__transform__: Transform = transform or Transform()
     self.__tag__ = tag
@@ -51,3 +52,27 @@ class AbsractGameObject(ABC):
   @property
   def name(self):
     return self.__name__
+  
+  # Inputs
+  def input(self):
+    pass
+  
+  def update(self):
+    pass
+  
+  def fixed_update(self):
+    pass
+  
+  def render(self):
+    pass
+  
+
+class GameObject(AbstractGameObject):
+  
+  def __init__(self, transform, Transform, tags: List(str) - [], name: str = None):
+    super().__init__(transform=transform, tags=tags, name=name)
+    # Onscreen
+    self.started = False
+    self.destroyed = False
+    
+    # 1.11:27
