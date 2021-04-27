@@ -73,6 +73,11 @@ class GameObject(AbstractGameObject):
     super().__init__(transform=transform, tags=tags, name=name)
     # Onscreen
     self.started = False
+    # Removed
     self.destroyed = False
     
-    # 1.11:27
+  def start(self):
+    self.started = True
+    
+  def destroy(self):
+    self.destroyed = True
