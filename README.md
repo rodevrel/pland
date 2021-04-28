@@ -1,5 +1,5 @@
 <div align="center">
-  # Sniffle Python.
-  ## New Python Game Engine
+  <h1>Sniffle Python.</h1>
+  <h2>New Python Game Engine</h2>
   
   </div>
